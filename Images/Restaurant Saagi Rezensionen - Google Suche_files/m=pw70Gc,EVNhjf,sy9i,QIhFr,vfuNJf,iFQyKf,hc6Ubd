@@ -1,0 +1,41 @@
+this._s=this._s||{};(function(_){var window=this;
+try{
+_.r("pw70Gc");
+var eDb=function(a){let b=0;for(;a;)b++,a=a.parentElement;return b},fDb=function(a,b){return a.depth-b.depth||Number(a.HOc)-Number(b.HOc)||b.Rgc-a.Rgc},gDb=new Map,hDb=0,iDb=class extends _.gWa{Qya(a){a instanceof Element&&gDb.has(a)&&gDb.set(a,hDb)}},kDb,jDb;_.Bib=iDb;kDb=function(a,b){let c=_.Ss(a).Fc(()=>{jDb(a)});b&&(c=c.window(b));return c.build()};_.lDb=function(a,b){const c="function"==typeof _.zv&&b instanceof _.zv?b:void 0,d=new iDb;d.setLogger(a.Zj.tJa());return a.SSc(c.node,()=>{c.render(d)})};
+jDb=function(a){if(a.Aa.length!==0){gDb=new Map(a.Aa.map(b=>[b.element,0]));a.Aa.sort(fDb);for(const b of a.Aa){const c=gDb.get(b.element);b.Rgc>(c||0)&&(hDb=b.Rgc,gDb.set(b.element,hDb),b.sze())}a.Aa=[]}};
+_.mDb=class extends _.ap{static Sa(){return{service:{Zj:_.ps}}}constructor(a){super();this.Aa=[];this.Zj=a.service.Zj}execute(a){return kDb(this,a)()}SSc(a,b){({HOc:c=!1}={});var c;this.Aa.push({element:a,depth:eDb(a),HOc:c,sze:()=>b(),Rgc:this.Aa.length+1});return this}dM(a,b,c){this.Zj.dM(a,b,c)}B4(a,b,c){this.Zj.B4(a,b,c)}Hd(a,b){return this.Zj.Hd(a,b)}oa(a,b){return this.Zj.oa(a,b)}};_.dp(_.zVa,_.mDb);
+_.u();
+}catch(e){_._DumpException(e)}
+try{
+_.r("EVNhjf");
+_.nDb=new _.df(_.AVa);
+_.u();
+}catch(e){_._DumpException(e)}
+try{
+_.qf(_.yVa);
+}catch(e){_._DumpException(e)}
+try{
+_.r("QIhFr");
+_.dp(_.BVa,class extends _.ap{static Sa(){return{service:{component:_.xs,scheduler:_.nDb}}}constructor(a){super();this.Aa=a.service.component;this.Ba=document.body;this.Da=a.service.scheduler;_.Qf(this.Ba,"UjQMac",b=>{b=b.data;b.hOa&&b.message&&_.vDb(b.hOa,b.message,b)})}Ca(a,b){const c=this;return _.y(function*(){yield c.oa(a,[],[],!0,b)})}oa(a,b,c,d=!1,e){if(!this.Ba.contains(a))return _.Ff();const f={};return this.Aa.Xga(a).then(g=>_.cjb(g).then(h=>{const k=_.njb(this.Aa.kt(g.id,g.getParams()).oa(g.oa),
+Object.assign({Yza:-1},e)),l=h.Da;h=h.Xga().v_a;const n=new Set(Object.keys(h));Object.assign(f,h);if(d){h={};for(let q in l)n.has(q)?delete f[q]:h[q]=l[q];return k.rC(h).fetch()}b.forEach((q,t)=>{for(const z in l){if(!l[z])continue;var v=l[z];const E=_.mRa(q).MAa,J=c[t];E===_.mRa(v).MAa&&J?v.lTa()?(v=v.clone(),J(v),l[z]=v.Ll()):J(v):n.has(z)&&_.EWa(v,E)&&(delete f[z],delete l[z])}});return k.rC(l).fetch()}).then(h=>{const k=h.Xga().v_a;Object.assign(k,f);return this.Da.SSc(a,()=>h.uhb(a)).execute()}))}});
+_.u();
+}catch(e){_._DumpException(e)}
+try{
+_.r("vfuNJf");
+_.Djb=class extends _.ap{oa(){}Ca(){}};_.dp(_.xVa,_.Djb);
+_.u();
+}catch(e){_._DumpException(e)}
+try{
+_.r("iFQyKf");
+_.Rib=new _.df(_.yVa);
+_.u();
+}catch(e){_._DumpException(e)}
+try{
+_.r("hc6Ubd");
+_.qf(_.oua);_.Ijb=function(a){return a.Ca.Xga(a.oa).then(b=>b.Ba)};_.Jjb=function(a,b){var c={Yza:-1};return a.Ca.Xga(a.oa).then(d=>{d.update(0,b);return a.Ea.Ca(a.oa,c)})};
+_.Bs=class extends _.Wh{static Sa(){return{service:{component:_.xs,scheduler:_.Rib}}}constructor(a){super();this.oa=_.Ejb();this.Ca=a.service.component;this.Ea=a.service.scheduler;this.Da=[];this.Aa=[];this.Ga=null;this.getData("p").string(null)}Vc(a){return this.Ea instanceof _.Djb||!this.oa.hasAttribute("autoupdate")?super.Vc(a):{handler:(b,c,d)=>{this.Da.push(b);c==="UjQMac"&&d&&typeof d.hOa==="function"?this.Aa.push(d.hOa):c==="nDa8ic"?this.Aa.push(null):this.Aa.push(e=>{_.xb(e,b);return e});
+this.Da.length===1&&_.$n(()=>{this.Ea.oa(this.oa,this.Da,this.Aa).then(()=>{this.Da=[];this.Aa=[]})})}}}trigger(a,b){_.Yf(_.Kf(this.oa),a,b,!0,{_retarget:this.oa})}getParams(a){const b=this.getData("p").string(null);return b?_.Hib(b,c=>_.ac(a,c)):this.Xga()?this.Xga().getParams():new a}m1a(){return this.Ca.Xga(this.oa).then(a=>_.cjb(a)).then(a=>({template:a.hg(),args:a.M6()}))}Xga(){return this.Ga}};_.zs(_.tr,_.Bs);
+_.u();
+}catch(e){_._DumpException(e)}
+})(this._s);
+// Google Inc.
