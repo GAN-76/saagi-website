@@ -196,7 +196,7 @@ header.scrolled .logo img {
 /* Hero Bereich */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/2024-12-23.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/Aquarium_02.JPG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
