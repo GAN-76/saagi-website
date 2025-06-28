@@ -184,7 +184,8 @@
                     <div class="reservation-card">
                         <h3>Online-Reservierung</h3>
                         <div class="form-content">
-                            <form action="https://formsubmit.co/info@restaurant-saagi.be" method="POST">                                <div class="form-group">
+                            <form id="reservation-form" method="POST">
+                                <div class="form-group">
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Ihr Name *" required>
                                 </div>
                                 
@@ -238,17 +239,8 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Versteckte Felder für FormSubmit.co -->
-                                <input type="hidden" name="_subject" value="Neue Tischreservierung im Restaurant Saagi">
-                                <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="reservierung-danke.html">
-                                <input type="hidden" name="_honey">
-                                <!-- Debug-Modus deaktiviert für Produktionsbetrieb -->
-                                <input type="hidden" name="_debug" value="false">
-                                <!-- Backup CC-E-Mail für zusätzliche Sicherheit -->
-                                <input type="hidden" name="_cc" value="au@restaurant-saagi.be">
-                                <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Reservierungsanfrage im Restaurant Saagi. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten.">
+                                <!-- Versteckte Felder für EmailJS -->
+                                <input type="hidden" name="contact_number">
                                 
                                 <div class="form-group" style="margin-bottom: 0;">
                                     <button type="submit" class="btn-primary" style="width: 100%;">Tisch reservieren</button>
@@ -315,6 +307,15 @@
     </div>
 
     <script src="js/main.js"></script>
+    
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // EmailJS Public Key
+            emailjs.init("6eNRV6HReBWCSCA0R");
+        })();
+    </script>
     
     <!-- Validierungsskript für das Reservierungsformular -->
     <script>
@@ -542,6 +543,8 @@
             
             // Formularvalidierung vor dem Absenden
             form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
                 // Prüfe alle Felder vor dem Absenden erneut
                 emailValid = validateEmail(emailInput.value);
                 phoneValid = validatePhone(phoneInput.value);
@@ -595,8 +598,6 @@
                 
                 // Verhindere das Absenden, wenn mindestens ein Feld ungültig ist
                 if (!emailValid || !phoneValid || !timeValid) {
-                    event.preventDefault();
-                    
                     // Zeige eine Fehlermeldung an
                     if (!emailValid) {
                         alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
@@ -612,6 +613,21 @@
                     
                     return false;
                 }
+                
+                // Generiere eine zufällige Kontaktnummer für EmailJS
+                this.contact_number.value = Math.random() * 100000 | 0;
+                
+                // Sende das Formular mit EmailJS
+                // Sende das Formular mit den korrekten IDs
+                emailjs.sendForm('default_service', 'template_0mgke3t', this)
+                    .then(function() {
+                        // Bei Erfolg zur Dankesseite weiterleiten
+                        window.location.href = 'reservierung-danke.html';
+                    }, function(error) {
+                        // Bei Fehler eine Meldung anzeigen
+                        console.log('FEHLER...', error);
+                        alert('Es gab ein Problem mit Ihrer Reservierung. Bitte versuchen Sie es später erneut.');
+                    });
             });
             
             // Initialisiere Datumsfeld und Zeitslots beim Laden der Seite
