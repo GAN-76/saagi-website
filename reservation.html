@@ -409,7 +409,7 @@
                     currentMinute = now.getMinutes();
                 }
                 
-                // Füge Zeitslots hinzu, die nach der aktuellen Zeit liegen und mindestens 1 Stunde vor Schließung
+                // Füge Zeitslots hinzu, die nach der aktuellen Zeit liegen und mindestens 1 Stunde vor Schliessung
                 for (const slot of slots) {
                     const [slotHour, slotMinute] = slot.split(':').map(num => parseInt(num, 10));
                     
@@ -418,11 +418,11 @@
                     const currentTimeInMinutes = currentHour * 60 + currentMinute;
                     const closeTimeInMinutes = timeToMinutes(closeTime);
                     
-                    // Prüfe, ob der Zeitslot mindestens 1 Stunde vor Schließung liegt
+                    // Prüfe, ob der Zeitslot mindestens 1 Stunde vor Schliessung liegt
                     const isBeforeLastHour = slotTimeInMinutes <= closeTimeInMinutes - 60;
                     
                     // Für heute: nur zukünftige Slots anzeigen
-                    // Für andere Tage: alle Slots die mindestens 1h vor Schließung sind
+                    // Für andere Tage: alle Slots die mindestens 1h vor Schliessung sind
                     if ((!isToday || slotTimeInMinutes > currentTimeInMinutes) && isBeforeLastHour) {
                         const option = document.createElement('option');
                         const formattedTime = `${slotHour.toString().padStart(2, '0')}:${slotMinute.toString().padStart(2, '0')}`;
