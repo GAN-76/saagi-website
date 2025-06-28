@@ -184,7 +184,7 @@
                     <div class="reservation-card">
                         <h3>Online-Reservierung</h3>
                         <div class="form-content">
-                            <form id="reservation-form" action="https://formsubmit.co/info@restaurant-saagi.be" method="POST">
+                            <form id="reservation-form" action="https://formsubmit.co/el/confirm/info@restaurant-saagi.be" method="POST">
                                 <div class="form-group">
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Ihr Name *" required>
                                 </div>
@@ -245,7 +245,10 @@
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_next" value="reservierung-danke.html">
                                 <input type="hidden" name="_honey">
-                                <input type="hidden" name="_debug" value="true">
+                                <!-- Debug-Modus deaktiviert für Produktionsbetrieb -->
+                                <input type="hidden" name="_debug" value="false">
+                                <!-- Backup CC-E-Mail für zusätzliche Sicherheit -->
+                                <input type="hidden" name="_cc" value="au@restaurant-saagi.be">
                                 <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Reservierungsanfrage im Restaurant Saagi. Wir werden Ihre Anfrage so schnell wie möglich bearbeiten.">
                                 
                                 <div class="form-group" style="margin-bottom: 0;">
