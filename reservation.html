@@ -617,38 +617,17 @@
                 // Generiere eine zufällige Kontaktnummer für EmailJS
                 this.contact_number.value = Math.random() * 100000 | 0;
                 
-                // Erstelle ein Objekt mit allen Formularfeldern für die Konsole
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    persons: document.getElementById('persons').value,
-                    date: document.getElementById('reservation-date').value,
-                    time: document.getElementById('reservation-time').value,
-                    message: document.getElementById('message').value
-                };
-                
-                console.log('Reservierungsdaten:', formData);
-                
+                // Sende das Formular mit EmailJS
                 // Sende das Formular mit den korrekten IDs
-                emailjs.sendForm('default_service', 'template_0mgke3t', this, {
-                    // Stelle sicher, dass alle Felder explizit übermittelt werden
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    persons: formData.persons,
-                    date: formData.date,
-                    time: formData.time,
-                    message: formData.message
-                })
-                .then(function() {
-                    // Bei Erfolg zur Dankesseite weiterleiten
-                    window.location.href = 'reservierung-danke.html';
-                }, function(error) {
-                    // Bei Fehler eine Meldung anzeigen
-                    console.log('FEHLER...', error);
-                    alert('Es gab ein Problem mit Ihrer Reservierung. Bitte versuchen Sie es später erneut.');
-                });
+                emailjs.sendForm('default_service', 'template_0mgke3t', this)
+                    .then(function() {
+                        // Bei Erfolg zur Dankesseite weiterleiten
+                        window.location.href = 'reservierung-danke.html';
+                    }, function(error) {
+                        // Bei Fehler eine Meldung anzeigen
+                        console.log('FEHLER...', error);
+                        alert('Es gab ein Problem mit Ihrer Reservierung. Bitte versuchen Sie es später erneut.');
+                    });
             });
             
             // Initialisiere Datumsfeld und Zeitslots beim Laden der Seite
