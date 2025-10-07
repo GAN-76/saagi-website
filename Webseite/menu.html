@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Die exklusive Speisekarte des Restaurant Saagi in Steffisburg - Fusionsküche mit ausgewählten Spezialitäten.">
+    <title>Speisekarte - Restaurant Saagi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Spezielles Styling für die Speisekarte */
+        .menu-section {
+            margin-bottom: 50px;
+        }
+        
+        .menu-title {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .menu-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .menu-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .menu-item-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        .menu-item-price {
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-right: 15px;
+        }
+        
+        .menu-item-description {
+            font-size: 0.95rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        
+        .menu-download {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .menu-page-content {
+            padding: 150px 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header mit Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/Logo_Saagi.png" alt="Restaurant Saagi Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <div class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Speisekarte</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="reservation.html" class="btn-reservation">Reservieren</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Speisekarte Inhalt -->
+    <section class="menu-page-content">
+        <div class="container">
+            <div class="section-header">
+                <h1>Unsere Speisekarte</h1>
+                <p>Entdecken Sie unsere exquisiten Kreationen</p>
+            </div>
+            
+            <!-- Suppen -->
+            <div class="menu-section">
+                <h2 class="menu-title">Suppen</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Tagessuppe</span>
+                            <span class="menu-item-price">7.-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Saisonsuppe</span>
+                            <span class="menu-item-price">10.-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salate -->
+            <div class="menu-section">
+                <h2 class="menu-title">Salate</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bunter Blattsalat</span>
+                            <span class="menu-item-price">8.-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Gemischter Salat</span>
+                            <span class="menu-item-price">11.-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Salatteller ~ Saagi</span>
+                            <span class="menu-item-price">16.-</span>
+                        </div>
+                        <div class="menu-item-description">Angemachte Salat / Spiegelei und Früchtegarnitur</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vorspeisen -->
+            <div class="menu-section">
+                <h2 class="menu-title">Vorspeisen</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bruschetta</span>
+                            <span class="menu-item-price">10.-</span>
+                        </div>
+                        <div class="menu-item-description">Knoblauchbrot mit Tomatenwürfeln, Basilikum, Olivenöl und Oregano und Salat Garnitur</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Frühlingsrollen</span>
+                            <span class="menu-item-price">12.-</span>
+                        </div>
+                        <div class="menu-item-description">Gemüse Frühlingsrollen mit Süsssauer-Sauce und Salat Garnitur</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Lammrollen</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Lammrollen mit Süsssauer-Sauce und Salat Garnitur</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tamilische Spezialitäten -->
+            <div class="menu-section">
+                <h2 class="menu-title">Tamilische Spezialitäten</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Kottu Rotti mit Lammcurry</span>
+                            <span class="menu-item-price">24.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Parotta, Ei, Marktgemüse</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Chicken Fried Rice</span>
+                            <span class="menu-item-price">23.-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Parotta</span>
+                            <span class="menu-item-price">22.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Lammcurry</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Reis mit Curry</span>
+                            <span class="menu-item-price">26.-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pasta -->
+            <div class="menu-section">
+                <h2 class="menu-title">Pasta</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Spaghetti Pesto</span>
+                            <span class="menu-item-price">21.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Basilikum, Pinienkerne</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Spaghetti carbonara</span>
+                            <span class="menu-item-price">24.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Speck, Ei, Rahm und Grana</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Penne all' arrabbiata</span>
+                            <span class="menu-item-price">23.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Tomatensauce, Peperoncino, Knoblauch und Basilikum</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Spaghetti Aglio olio</span>
+                            <span class="menu-item-price">20.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Knoblauch, Zwiebel, Olivenöl und Peperoncino</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rösti -->
+            <div class="menu-section">
+                <h2 class="menu-title">Rösti</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Landfrauenrösti</span>
+                            <span class="menu-item-price">25.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Raclettekäse, Marktgemüse und Spiegelei</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bauernrösti</span>
+                            <span class="menu-item-price">27.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Schinken, Raclette und Spiegelei</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Geschnetzeltes Kalbsleberli</span>
+                            <span class="menu-item-price">34.-</span>
+                        </div>
+                        <div class="menu-item-description">mit einer goldbraunen Rösti</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Kalbsgeschnetzeltes</span>
+                            <span class="menu-item-price">36.-</span>
+                        </div>
+                        <div class="menu-item-description">an einer Kräuter – Champignon - Crème Sauce s einer goldbraunen Rösti</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Toast -->
+            <div class="menu-section">
+                <h2 class="menu-title">Toast</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Toast Hawaii - 2 Toast</span>
+                            <span class="menu-item-price">17.-</span>
+                        </div>
+                        <div class="menu-item-description">Schinken / Ananas und Raclettekäse<br>Serviert mit kleinem grünem Salat</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Toast Hawaii - 1 Toast</span>
+                            <span class="menu-item-price">14.-</span>
+                        </div>
+                        <div class="menu-item-description">Schinken / Ananas und Raclettekäse<br>Serviert mit kleinem grünem Salat</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Klassiker -->
+            <div class="menu-section">
+                <h2 class="menu-title">Klassiker</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Panierte Schweinschnitzel</span>
+                            <span class="menu-item-price">27.-</span>
+                        </div>
+                        <div class="menu-item-description">Marktgemüse und Pommes Frites</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Rahmschnitzel mit Nüdeli</span>
+                            <span class="menu-item-price">28.-</span>
+                        </div>
+                        <div class="menu-item-description">Champignonssauce / feine Nüdeli / buntes Marktgemüse</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Pouletgeschnetzeltes ~ Casimir</span>
+                            <span class="menu-item-price">25.-</span>
+                        </div>
+                        <div class="menu-item-description">Kokos-Currysauce / Reis / diverse Früchte und frittierte Frühlingsrollen</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Gebackene Egliknusperli</span>
+                            <span class="menu-item-price">23.-</span>
+                        </div>
+                        <div class="menu-item-description">Im Bierteig mit Tartar Sauce Blattspinat und Pommes Frites</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Rindstartar</span>
+                            <span class="menu-item-price">26.-</span>
+                        </div>
+                        <div class="menu-item-description">Mit Toast und Butter</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fisch -->
+            <div class="menu-section">
+                <h2 class="menu-title">Fisch</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Egli Filet mit Gemüsereis</span>
+                            <span class="menu-item-price">27.-</span>
+                        </div>
+                        <div class="menu-item-description">mit Buttermandelsauce</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bami Goreng mit Meeresfrüchte</span>
+                            <span class="menu-item-price">25.-</span>
+                        </div>
+                        <div class="menu-item-description">Bratnudel</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Burger -->
+            <div class="menu-section">
+                <h2 class="menu-title">Burger</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Saagi Special</span>
+                            <span class="menu-item-price">27.-</span>
+                        </div>
+                        <div class="menu-item-description">Regionale Rindhackfleisch à 150g, gegrillter Speck, Spiegelei, Käse,
+                        Tomaten, Zwiebeln, Salat, Gurken, Hausgemachte Sauce</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Classic</span>
+                            <span class="menu-item-price">20.-</span>
+                        </div>
+                        <div class="menu-item-description">Regionale Rindhackfleisch à 150g, Zwiebeln, Salat, Gurken, Tomaten</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Cheese Burger</span>
+                            <span class="menu-item-price">22.-</span>
+                        </div>
+                        <div class="menu-item-description">Regionale Rindhackfleisch à 150g, Käse
+                        (Cheddar /Gruyère), Tomaten, Zwiebeln, Salat, Gurken</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Spicy Chicken Burger</span>
+                            <span class="menu-item-price">24.-</span>
+                        </div>
+                        <div class="menu-item-description">100 % CH-Poulet filet, Salat, Zwiebeln und Hausgemachte Sauce</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Vegi-Rösti Burger</span>
+                            <span class="menu-item-price">22.-</span>
+                        </div>
+                        <div class="menu-item-description">Karamelisierte Zwiebeln, Salat, Gurken, Käse, Tomaten</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dessert -->
+            <div class="menu-section">
+                <h2 class="menu-title">Dessert</h2>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Geschmackssorten Glace</span>
+                        </div>
+                        <div class="menu-item-description">Schokolade ~ Vanille ~ Erdbeere ~ Zitrone ~ Mocca</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Kugel Eis</span>
+                            <span class="menu-item-price">3.50</span>
+                        </div>
+                        <div class="menu-item-description">Aroma nach Wahl</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Frappé</span>
+                            <span class="menu-item-price">10.-</span>
+                        </div>
+                        <div class="menu-item-description">Aroma nach Wahl</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Eiskaffee</span>
+                            <span class="menu-item-price">8.-</span>
+                        </div>
+                        <div class="menu-item-description">Mocca</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Cafe +</span>
+                            <span class="menu-item-price">8.-</span>
+                        </div>
+                        <div class="menu-item-description">Espresso und 1 Kugel Glace nach Wahl</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Coupe Dänemark</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Feines Vanilleglace mit Schokoladensauce und Rahm</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Bananensplit</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Feines Vanilleglace und Bananenhälften garniert mit Schokoladensauce</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Zitronensorbet</span>
+                            <span class="menu-item-price">12.-</span>
+                        </div>
+                        <div class="menu-item-description">Frisches Zitronensorbet mit Wodka</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Affogato</span>
+                            <span class="menu-item-price">8.-</span>
+                        </div>
+                        <div class="menu-item-description">Feines Vanille Glace mit Espresso</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Coupe Hot Berry</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Feines Vanilleglace übergossen mit heissen Waldbeeren und Rahm</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Meringue Glace</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Die Schweizer Spezialität aus Vanille- und Erdbeerglace mit Meringue</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Coupe Baileys</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Für Feinschmecker: Vanille- und Cafeglace mit Baileys</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <span class="menu-item-name">Coupe Nesselrode</span>
+                            <span class="menu-item-price">13.-</span>
+                        </div>
+                        <div class="menu-item-description">Vanilleglace mit Vermicelles und Meringue</div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Restaurant Saagi</h3>
+                    <p>Unterdorfstrasse 50</p>
+                    <p>3612 Steffisburg</p>
+                    <p>
+                        <a href="tel:+41334388686">Tel: 033 438 86 86</a>
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Öffnungszeiten</h3>
+                    <p>Montag: 09:00 – 21:00</p>
+                    <p>Dienstag: Geschlossen</p>
+                    <p>Mittwoch: 09:00 – 21:00</p>
+                    <p>Donnerstag: 09:00 – 21:00</p>
+                    <p>Freitag: 09:00 – 21:00</p>
+                    <p>Samstag: 09:30 – 21:00</p>
+                    <p>Sonntag: 16:00 – 20:00</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Speisekarte</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="reservation.html">Reservierung</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Restaurant Saagi - Alle Rechte vorbehalten</p>
+                </div>
+                <div class="legal-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie-Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>Diese Website verwendet Cookies, um Ihnen das beste Nutzererlebnis zu ermöglichen. <a href="datenschutz.html">Mehr erfahren</a></p>
+        <button id="acceptCookies" class="btn-primary">Akzeptieren</button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
